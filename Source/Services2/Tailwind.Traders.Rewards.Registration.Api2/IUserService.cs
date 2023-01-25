@@ -1,6 +1,6 @@
 ﻿using System.ServiceModel;
 
-namespace Tailwind.Traders.Rewards.Registration.Api
+namespace Tailwind.Traders.Rewards.Registration.Api2
 {
     [ServiceContract]
     public interface IUserService

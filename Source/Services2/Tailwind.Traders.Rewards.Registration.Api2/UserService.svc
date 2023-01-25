@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Tailwind.Traders.Rewards.Registration.Api2.UserService" CodeBehind="UserService.svc.cs" %>
