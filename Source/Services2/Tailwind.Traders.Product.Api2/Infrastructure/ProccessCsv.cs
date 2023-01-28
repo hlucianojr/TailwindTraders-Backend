@@ -50,7 +50,7 @@ namespace Tailwind.Traders.Product.Api2.Infrastructure
         {
             foreach(var classMap in _classMaps)
             {
-                csvReader.Configuration.RegisterClassMap(classMap.GetType());
+                csvReader.Context.RegisterClassMap(classMap.GetType());
             }
         }
     }

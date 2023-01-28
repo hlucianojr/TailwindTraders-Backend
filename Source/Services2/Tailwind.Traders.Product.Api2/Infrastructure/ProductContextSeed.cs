@@ -31,7 +31,7 @@ namespace Tailwind.Traders.Product.Api2.Infrastructure
                 var brands = _processFile.Process<ProductBrand>(contentRootPath, "ProductBrands");
                 var types = _processFile.Process<ProductType>(contentRootPath, "ProductTypes");
                 var features = _processFile.Process<ProductFeature>(contentRootPath, "ProductFeatures");
-                var products = _processFile.Process<ProductItem>(contentRootPath, "ProductItems", new CsvHelper.Configuration.Configuration() { IgnoreReferences = true, MissingFieldFound = null });
+                var products = _processFile.Process<ProductItem>(contentRootPath, "ProductItems", new CsvHelper.Configuration.CsvConfiguration(System.Globalization.CultureInfo.InvariantCulture) { IgnoreReferences = true, MissingFieldFound = null });
                 var tags = _processFile.Process<ProductTag>(contentRootPath, "ProductTags");
 
                 await productContext.Tags.AddRangeAsync(tags);
